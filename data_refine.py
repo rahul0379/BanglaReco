@@ -23,7 +23,7 @@ def load_data(fold):
     for fl in listing:
       if not fl.endswith('.bmp'): continue
       im = Image.open(folder+fl)
-      im.resize((img_dim,img_dim))
+      im = im.resize((img_dim,img_dim))
       if fold=='Train':
         x.append(np.array(im))
         y.append(i)
